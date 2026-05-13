@@ -1,0 +1,6 @@
+{
+  "name": "Agenda da Naely",
+  "description": "Um aplicativo de agendamento de tarefas premium com visual rosé e preto, calendário 2026 completo e notificações inteligentes.",
+  "requestFramePermissions": ["notifications"],
+  "majorCapabilities": []
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-rose: #FF8FA3;
+  --color-rose-dark: #E67A8E;
+  --color-rose-light: #FFB3C1;
+  --color-bg-black: #000000;
+  --color-card-black: #0A0A0A;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-black text-rose-light font-sans antialiased selection:bg-rose selection:text-black;
+  }
+}
+
+.glass {
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 143, 163, 0.1);
+}
+
+.glass-premium {
+  background: linear-gradient(135deg, rgba(255, 143, 163, 0.1) 0%, rgba(10, 10, 10, 0.8) 100%);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 143, 163, 0.2);
+}
+
+.premium-shadow {
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.8);
+}
+
+.rose-glow {
+  box-shadow: 0 0 30px rgba(255, 143, 163, 0.3);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
